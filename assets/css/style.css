@@ -22,22 +22,26 @@ body {
 
 .carrossel .body {
   max-width: 100vw;
-  padding-left: 15px;
-  /* .card-item:first-child {
-      width: calc(((100vw - 1170px)/2) + 15px) !important;
-      margin-right: 0 !important;
-    } */
 }
 
 @media screen and (min-width: 1200px) {
   .carrossel .body {
-    margin-left: calc(((100vw - 1170px)/2) + 15px);
-    margin-right: 0;
-    max-width: calc(100vw - ((100vw - 1170px)/2) - 15px);
+    padding-left: 0px;
   }
 }
 
-.carrossel .body .card-item {
+.carrossel .body .card-item:first-child {
+  width: 0 !important;
+}
+
+@media screen and (min-width: 1200px) {
+  .carrossel .body .card-item:first-child {
+    width: calc(((100vw - 1170px)/2) + 15px) !important;
+    margin-right: 0 !important;
+  }
+}
+
+.carrossel .body .card-item:not(:first-child) {
   position: relative;
   padding: 23px 22px 0px 22px;
   background: #FFFFFF;
@@ -47,7 +51,7 @@ body {
   border-radius: 5px;
 }
 
-.carrossel .body .card-item .title {
+.carrossel .body .card-item:not(:first-child) .title {
   margin-top: 27px;
   color: #093366;
   font-size: 16px;
@@ -55,7 +59,7 @@ body {
   font-weight: 700;
 }
 
-.carrossel .body .card-item .line {
+.carrossel .body .card-item:not(:first-child) .line {
   background-color: #F2F7FE;
   margin: 33px -23px 0;
   display: block;
@@ -63,11 +67,11 @@ body {
   height: 1px;
 }
 
-.carrossel .body .card-item .footer {
+.carrossel .body .card-item:not(:first-child) .footer {
   padding: 15px 0;
 }
 
-.carrossel .body .card-item .footer .time {
+.carrossel .body .card-item:not(:first-child) .footer .time {
   margin-left: 15px;
   font-weight: bold;
   font-size: 16px;
@@ -75,7 +79,7 @@ body {
   color: #BEC8D8;
 }
 
-.carrossel .body .card-item a.tudo {
+.carrossel .body .card-item:not(:first-child) a.tudo {
   position: absolute;
   top: 0;
   left: 0;

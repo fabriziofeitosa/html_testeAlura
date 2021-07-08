@@ -25,21 +25,16 @@ body {
 
   .body {
     max-width: 100vw;
-    padding-left: 15px;
-
-    @media screen and (min-width: 1200px) {
-      margin-left: calc(((100vw - 1170px)/2) + 15px);
-      margin-right: 0;
-      max-width: calc(100vw - ((100vw - 1170px)/2) - 15px);
+    .card-item:first-child {
+      width: 0 !important;
+      @media screen and (min-width: 1200px) {
+        width: calc(((100vw - 1170px)/2) + 15px) !important;
+        margin-right: 0 !important;
+      }
     }
 
-    /* .card-item:first-child {
-      width: calc(((100vw - 1170px)/2) + 15px) !important;
-      margin-right: 0 !important;
-    } */
-
-    // .card-item:not(:first-child) {
-    .card-item {
+    .card-item:not(:first-child) {
+    // .card-item {
       position: relative;
       padding: 23px 22px 0px 22px;
       background: #FFFFFF;

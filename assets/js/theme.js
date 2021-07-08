@@ -3,7 +3,7 @@ var glide = new Glide('.glide', {
   perView: 4,
   gap: 25,
   bound: true,
-  rewind: false,
+  rewind: true,
   peek: {
     before: 0,
     after: 100,
@@ -24,4 +24,19 @@ var glide = new Glide('.glide', {
   }
 })
 
-glide.mount()
+// Manipulação
+var forward = document.querySelector('.carrossel .forward')
+var backward = document.querySelector('.carrossel .backward')
+var qtdElements = document.getElementsByClassName('card-item');
+
+forward.addEventListener('click', function () {
+  if (glide.index == (qtdElements.length - 2)) glide.go('<<');
+  else glide.go('>');
+})
+
+backward.addEventListener('click', function () {
+  glide.go('<')
+})
+
+// Iniciar
+glide.mount();
