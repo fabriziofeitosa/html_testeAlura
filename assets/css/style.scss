@@ -1,0 +1,75 @@
+/* Desenvolvido por Fabrizio Feitosa (fabriziofeitosa.me) */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+body {
+  background-color: #f9fbff;
+  color: #093366;
+  font-family: 'Inter', sans-serif;
+}
+
+.carrossel {
+  .header {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    .title {
+      font-weight: 900;
+    }
+    .arrows {
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .body {
+    @media screen and (min-width: 1200px) {
+      margin-left: calc((100vw - 1170px)/2);
+    }
+
+    .card-item {
+      position: absolute;
+      padding: 23px 22px 0px 22px;
+      background: #FFFFFF;
+      border: 1px solid #F2F7FE;
+      box-shadow: 4px 4px 20px rgba(120, 135, 182, 0.1);
+      border-radius: 5px;
+      width: 100%;
+      max-width: 315px;
+
+      .title {
+        margin-top: 27px;
+        color: #093366;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 700;
+      }
+      .line {
+        background-color: #F2F7FE;
+        margin: 33px -23px 0;
+        display: block;
+        width: calc(100% + 46px);
+        height: 1px;
+      }
+      .footer {
+        padding: 15px 0;
+        .time {
+          margin-left: 15px;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 18px;
+          color: #BEC8D8;
+        }
+      }
+
+      a.tudo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
