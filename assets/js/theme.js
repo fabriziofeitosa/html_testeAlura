@@ -1,6 +1,6 @@
 var glide = new Glide('.glide', {
   type: 'slider',
-  perView: 4,
+  perView: 5,
   gap: 25,
   bound: true,
   rewind: false,
