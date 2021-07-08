@@ -24,24 +24,18 @@ body {
   max-width: 100vw;
 }
 
-@media screen and (min-width: 1200px) {
-  .carrossel .body {
-    padding-left: 0px;
-  }
-}
-
-.carrossel .body .card-item:first-child {
+.carrossel .body .card-item.first {
   width: 0 !important;
 }
 
 @media screen and (min-width: 1200px) {
-  .carrossel .body .card-item:first-child {
+  .carrossel .body .card-item.first {
     width: calc(((100vw - 1170px)/2) + 15px) !important;
     margin-right: 0 !important;
   }
 }
 
-.carrossel .body .card-item:not(:first-child) {
+.carrossel .body .card-item:not(.first) {
   position: relative;
   padding: 23px 22px 0px 22px;
   background: #FFFFFF;
@@ -51,7 +45,7 @@ body {
   border-radius: 5px;
 }
 
-.carrossel .body .card-item:not(:first-child) .title {
+.carrossel .body .card-item .title {
   margin-top: 27px;
   color: #093366;
   font-size: 16px;
@@ -59,7 +53,7 @@ body {
   font-weight: 700;
 }
 
-.carrossel .body .card-item:not(:first-child) .line {
+.carrossel .body .card-item .line {
   background-color: #F2F7FE;
   margin: 33px -23px 0;
   display: block;
@@ -67,11 +61,11 @@ body {
   height: 1px;
 }
 
-.carrossel .body .card-item:not(:first-child) .footer {
+.carrossel .body .card-item .footer {
   padding: 15px 0;
 }
 
-.carrossel .body .card-item:not(:first-child) .footer .time {
+.carrossel .body .card-item .footer .time {
   margin-left: 15px;
   font-weight: bold;
   font-size: 16px;
@@ -79,7 +73,7 @@ body {
   color: #BEC8D8;
 }
 
-.carrossel .body .card-item:not(:first-child) a.tudo {
+.carrossel .body .card-item a.tudo {
   position: absolute;
   top: 0;
   left: 0;
