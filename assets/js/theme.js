@@ -45,14 +45,12 @@ var backward = document.querySelector('.carrossel .backward')
 var qtdElements = document.getElementsByClassName('card-item').length;
 
 // Mover
-forward.addEventListener('click', function () { glide.go('>') })
-backward.addEventListener('click', function () { glide.go('<') })
+forward.addEventListener('click', () => glide.go('>') );
+backward.addEventListener('click', () => glide.go('<') );
 
-// Ignorar primeiro item no mobile
-glide.on(['run'], function () {
-  if (glide.index >= (qtdElements - 1)) {
-    glide.index = glide.index - 1;
-  }
+// Ajuste na contagem por conta do primeiro elemento
+glide.on(['run'], () => {
+  if (glide.index >= (qtdElements - 1)) glide.index = glide.index - 1;
 })
 
 // Iniciar

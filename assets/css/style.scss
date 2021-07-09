@@ -15,8 +15,10 @@ body {
     padding: 0 15px 30px;
     .title {
       font-weight: 900;
+      max-width: 60vw;
     }
     .arrows {
+      min-width: 72px;
       img {
         cursor: pointer;
       }
