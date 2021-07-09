@@ -5,10 +5,17 @@ var glide = new Glide('.glide', {
   bound: true,
   rewind: false,
   peek: {
-    before: 0,
+    before: 50,
     after: 100,
   },
   breakpoints: {
+    1500: {
+      perView: 3,
+      peek: {
+        before: 10,
+        after: 100,
+      }
+    },
     1200: {
       perView: 3,
       peek: {
