@@ -1,47 +1,45 @@
 var glide = new Glide('.glide', {
-  type: 'slider',
+  type: 'carousel',
   perView: 5,
   gap: 25,
-  bound: true,
-  rewind: false,
   peek: {
-    before: 50,
+    before: 0,
     after: 100,
   },
   breakpoints: {
     1500: {
-      perView: 3,
+      perView: 4,
       peek: {
-        before: 10,
+        before: 0,
         after: 100,
       }
     },
     1200: {
       perView: 3,
       peek: {
-        before: 15,
-        after: 100,
+        before: 0,
+        after: 150,
       }
     },
     992: {
       perView: 3,
       peek: {
-        before: 15,
-        after: 100,
+        before: 0,
+        after: 150,
       }
     },
     880: {
       perView: 2,
       peek: {
-        before: 15,
-        after: 100,
+        before: 0,
+        after: 150,
       }
     },
     576: {
       perView: 1,
       peek: {
-        before: 15,
-        after: 100,
+        before: 0,
+        after: 70,
       }
     }
   }
@@ -54,11 +52,6 @@ var qtdElements = document.getElementsByClassName('card-item').length;
 // Mover
 forward.addEventListener('click', () => glide.go('>') );
 backward.addEventListener('click', () => glide.go('<') );
-
-// Ajuste na contagem por conta do primeiro elemento
-glide.on(['run'], () => {
-  if (glide.index >= (qtdElements - 1)) glide.index = glide.index - 1;
-})
 
 // Iniciar
 glide.mount();
